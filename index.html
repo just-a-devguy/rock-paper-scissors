@@ -25,18 +25,26 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      #results {
+        border: solid red;
+        display: none;
+      }
     </style>
   </head>
   <body>
-    <p>Scores: <span id="score"></span></p>
+    <p>Scores: <span id="score">0</span></p>
 
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissor">Scissor</button>
+    <div id="choices">
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissor">Scissor</button>
+    </div>
 
-    <div id="decision-mssg"></div>
+    <div id="results">
+      <div id="decision-mssg"></div>
 
-    <button id="replay">Play Again</button>
+      <button id="replay">Play Again</button>
+    </div>
 
     <div class="attribution">
       Challenge by
