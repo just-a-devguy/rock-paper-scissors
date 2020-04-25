@@ -5,6 +5,9 @@ replay = document.getElementById("replay");
 scoreValue = document.getElementById("score");
 results = document.getElementById("results");
 choices = document.getElementById("choices");
+userRes = document.getElementById("user");
+cpuRes = document.getElementById("cpu");
+resultMssg = document.getElementById("mssg");
 
 options = [rock, paper, scissor];
 cpuOptions = ["rock", "paper", "scissor"];
@@ -26,29 +29,28 @@ let { user, cpu, score } = gameState;
 function playGame() {
   user = this.id;
   cpu = cpuOptions[Math.floor(Math.random() * options.length)];
-  console.log(`user: ${user}, cpu: ${cpu}`);
   resultPage();
 
   if (user === "rock" && cpu === "paper") {
-    console.log(`${cpu} beats ${user}`);
     score--;
+    resultMssg.innerHTML = "Lose";
   } else if (user === "rock" && cpu === "scissor") {
-    console.log(`${user} beats ${cpu}`);
     score++;
+    resultMssg.innerHTML = "Win";
   } else if (user === "paper" && cpu === "rock") {
-    console.log(`${user} beats ${cpu}`);
     score++;
+    resultMssg.innerHTML = "Win";
   } else if (user === "paper" && cpu === "scissor") {
-    console.log(`${cpu} beats ${user}`);
     score--;
+    resultMssg.innerHTML = "Lose";
   } else if (user === "scissor" && cpu === "rock") {
-    console.log(`${cpu} beats ${user}`);
     score--;
+    resultMssg.innerHTML = "Lose";
   } else if (user === "scissor" && cpu === "paper") {
-    console.log(`${user} beats ${cpu}`);
     score++;
+    resultMssg.innerHTML = "Win";
   } else {
-    console.log("Tie");
+    resultMssg.innerHTML = "Tied";
   }
 
   scoreValue.innerHTML = score;
@@ -58,23 +60,18 @@ function resultPage() {
   choices.style.display = "none";
   results.style.display = "block";
 
-  const newDiv = document.createElement("button");
-  newDiv.id = cpu;
-  const newCont = document.createTextNode(cpu);
+  userRes.innerHTML = user;
 
-  // console.log(newDiv);
-  newDiv.appendChild(newCont);
-
-  document.body.insertBefore(newDiv, results);
+  setTimeout(() => {
+    cpuRes.innerHTML = cpu;
+  }, 1000);
 }
 
 function resetGame() {
   user = "";
   cpu = "";
   scoreValue.innerHTML = score;
-  console.log(`user: ${user} cpu: ${cpu} score: ${score}`);
 
   choices.style.display = "block";
   results.style.display = "none";
-  document.body.removeChild(newDiv);
 }

@@ -26,7 +26,6 @@
         color: hsl(228, 45%, 44%);
       }
       #results {
-        border: solid red;
         display: none;
       }
     </style>
@@ -41,7 +40,15 @@
     </div>
 
     <div id="results">
-      <div id="decision-mssg"></div>
+      <p>User Pick</p>
+      <button id="user"></button>
+
+      <p>CPU Pick</p>
+      <button id="cpu"></button>
+
+      <div id="decision-mssg">
+        <p>You <span id="mssg"></span></p>
+      </div>
 
       <button id="replay">Play Again</button>
     </div>
