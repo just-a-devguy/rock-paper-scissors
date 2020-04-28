@@ -31,25 +31,38 @@
     <main>
       <section class="user-choices">
         <div id="choices">
-          <button class="user-choice" id="rock">Rock</button>
-          <button class="user-choice" id="paper">Paper</button>
-          <button class="user-choice" id="scissor">Scissor</button>
+          <button class="user-choice choice-item paper" id="paper">
+            <img src="images/icon-paper.svg" alt="Paper" />
+          </button>
+          <button class="user-choice choice-item rock" id="rock">
+            <img src="images/icon-rock.svg" alt="Rock" />
+          </button>
+          <button class="user-choice choice-item scissor" id="scissor">
+            <img src="images/icon-scissors.svg" alt="Scissors" />
+          </button>
         </div>
       </section>
 
       <section class="results-display">
         <div id="results">
           <p>User Pick</p>
-          <button id="user"></button>
-
-          <p>CPU Pick</p>
-          <button id="cpu"></button>
+          <div class="result-section">
+            <button class="choice-item" id="user">
+              <img src="images/icon-rock.svg" alt="" />
+            </button>
+          </div>
 
           <div id="decision-mssg">
             <p>You <span id="mssg"></span></p>
+            <button id="replay">Play Again</button>
           </div>
 
-          <button id="replay">Play Again</button>
+          <p>CPU Pick</p>
+          <div class="result-section">
+            <button class="choice-item" id="cpu">
+              <img src="images/icon-paper.svg" alt="" />
+            </button>
+          </div>
         </div>
       </section>
     </main>

@@ -36,6 +36,80 @@ body {
   text-align: center;
   font-size: 2.5rem;
 }
+
+.user-choices {
+  /* height: 60vh; */
+  border: solid red;
+  text-align: center;
+  background-image: url("/images/bg-triangle.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2rem 0;
+  height: 50vh;
+}
+
+#choices {
+  /* border: solid black; */
+  position: relative;
+  width: 25%;
+  height: 100%;
+  margin: auto;
+}
+
+.choice-item {
+  /* display: flex; */
+  /* position: absolute; */
+  border-radius: 50%;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  border: 10px solid;
+  cursor: pointer;
+}
+
+/* 
+
+- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+*/
+.user-choice {
+  position: absolute;
+}
+
+.user-choice:first-of-type {
+  /* border-color: blue; */
+  top: 10%;
+  left: 10%;
+  padding: 2rem 2.2rem;
+}
+
+.user-choice:nth-of-type(2) {
+  /* bottom: 0%; */
+  top: 90%;
+  left: 50%;
+  /* border-color: red; */
+}
+
+.user-choice:last-of-type {
+  left: 85%;
+  /* border-color: yellow; */
+  /* padding: 2rem; */
+  top: 10%;
+  /* right: 0; */
+}
+
+.rock {
+  border-color: yellow;
+}
+
+.paper {
+  border-color: blue;
+}
+
+.scissor {
+  border-color: red;
+}
 /* 
 - Dark Text: hsl(229, 25%, 31%)
 - Score Text: hsl(229, 64%, 46%)
@@ -47,9 +121,30 @@ body {
 
 
 */
+
+/* Change name later */
 #results {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
 }
+
+.results-display {
+  border: solid black;
+  height: 50vh;
+}
+
+.result-section {
+  border: solid white;
+  border-radius: 50%;
+  background-color: darkblue;
+  /* padding: 2rem; */
+}
+
+/* #results {
+  display: none;
+} */
 
 /* Footer */
 .attribution {
