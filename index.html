@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="updated-style.css" />
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
     <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
@@ -22,7 +22,7 @@
       <section class="page-title">
         <img src="images/logo.svg" alt="Logo" />
         <div class="score-area">
-          <p>Score:</p>
+          <p>Score</p>
           <h1 id="score">0</h1>
         </div>
       </section>
@@ -32,8 +32,8 @@
       <section class="user-choices">
         <div id="choices">
           <button class="user-choice choice-item paper" id="paper"></button>
-          <button class="user-choice choice-item rock" id="rock"></button>
           <button class="user-choice choice-item scissor" id="scissor"></button>
+          <button class="user-choice choice-item rock" id="rock"></button>
         </div>
       </section>
 
@@ -59,14 +59,32 @@
           </div>
         </div>
       </section>
+
+      <section class="overlay">
+        <div class="rules">
+          <div class="rules-header">
+            <p>Rules</p>
+            <button>
+              <img src="images/icon-close.svg" alt="rules close button" />
+            </button>
+          </div>
+          <img src="images/image-rules.svg" alt="rules-detail" />
+        </div>
+      </section>
     </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Adler Luders</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/adluders">Adler Luders</a>.
+      </div>
+
+      <div class="rules-btn">
+        <button>Rules</button>
+      </div>
+    </footer>
 
     <script src="app.js"></script>
   </body>

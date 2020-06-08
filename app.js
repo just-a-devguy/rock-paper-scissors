@@ -10,7 +10,19 @@ const rock = document.getElementById("rock"),
   decision_mssg = document.getElementById("decision-mssg"),
   resultMssg = document.getElementById("mssg"),
   options = [rock, paper, scissor],
-  cpuOptions = ["rock", "paper", "scissor"];
+  cpuOptions = ["rock", "paper", "scissor"],
+  overlay = document.querySelector(".overlay"),
+  closeBtn = document.querySelector(".rules-header button"),
+  rulesBtn = document.querySelector(".rules-btn button");
+
+// Overlay
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+rulesBtn.addEventListener("click", () => {
+  overlay.style.display = "flex";
+});
 
 options.forEach((op) => {
   op.addEventListener("click", playGame);
@@ -79,6 +91,6 @@ function resetGame() {
   cpuRes.className = "choice-item";
   userRes.className = "choice-item";
 
-  choices.style.display = "block";
+  choices.style.display = "flex";
   results.style.display = "none";
 }
