@@ -85,6 +85,7 @@ body {
 
 .score-area h1 {
   font-size: 3rem;
+  /* color: #2a46c0; */
 }
 
 /* User Choice */
@@ -165,7 +166,7 @@ body {
 
 #decision-mssg {
   /* border: solid green; */
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -244,4 +245,57 @@ footer {
   border: #fff solid 2px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Header */
+  .page-title {
+    width: 90%;
+  }
+
+  img[alt="Logo"] {
+    display: inline-block;
+    /* border: solid red; */
+    /* width: 80%; */
+  }
+
+  .score-area {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Results*/
+  .results-display > div {
+    /* border: solid red; */
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .results-item {
+    /* border: solid green; */
+    padding: 0;
+    padding: 0.2rem;
+  }
+
+  .results-item:last-of-type {
+    grid-column: 3/4;
+  }
+
+  #decision-mssg {
+    /* border: solid orange; */
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    text-align: center;
+  }
+
+  #decision-mssg p {
+    font-size: 1.7rem;
+  }
+
+  #replay {
+    padding: 0.8rem;
+  }
+
+  .result-section > .choice-item {
+    padding: 2.5rem;
+    /* background-color: red; */
+  }
 }

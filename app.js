@@ -65,7 +65,7 @@ function playGame() {
     resultMssg.innerHTML = "Tied";
   }
 
-  scoreValue.innerHTML = score;
+  // scoreValue.innerHTML = score;
 }
 
 function resultPage() {
@@ -75,11 +75,13 @@ function resultPage() {
   userRes.classList.add(user);
 
   setTimeout(() => {
+    // decision_mssg.style.display = "flex";
     cpuRes.classList.add(cpu);
   }, 1000);
 
   setTimeout(() => {
     decision_mssg.style.display = "flex";
+    scoreValue.innerHTML = score;
   }, 1500);
 }
 
@@ -93,4 +95,6 @@ function resetGame() {
 
   choices.style.display = "flex";
   results.style.display = "none";
+
+  decision_mssg.style.display = "none";
 }
